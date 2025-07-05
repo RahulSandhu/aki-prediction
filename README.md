@@ -52,7 +52,7 @@ as LaTeX reports and presentation slides.
 2. **Create and activate a virtual environment**
 
    ```bash
-   python3 -m venv venv
+   python3 -m venv .venv
    source venv/bin/activate
    ```
 
@@ -86,15 +86,6 @@ selection
   * **F1-score**: 71.8%
 * Top predictors:
   * eGFR, Creatinine, BUN, Anion Gap, Potassium
-
-## 📈 Figures
-
-All visual outputs from the project are saved in the `images/` directory:
-
-* ROC curves
-* Feature importance bar plots
-* eGFR formula illustration
-* Kidney diagrams for anatomical reference
 
 ## 📚 License
 
