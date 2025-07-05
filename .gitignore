@@ -1,0 +1,8 @@
+# Ignore files and folders
+config/**
+presentation/**
+report/**
+
+# Re-allow only main.pdf
+!report/main.pdf
+!presentation/main.pdf

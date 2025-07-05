@@ -1,0 +1,24 @@
+Metrics for df:
+AKI NaN Count: 2211
+AKI Non-NaN Count: 159
+Non-AKI NaN Count: 1230
+Non-AKI Non-NaN Count: 58
+----------------------------------------
+Metrics for df_clean:
+AKI NaN Count: 223
+AKI Non-NaN Count: 2135
+Non-AKI NaN Count: 110
+Non-AKI Non-NaN Count: 1173
+----------------------------------------
+Metrics for df_impute:
+AKI NaN Count: 0
+AKI Non-NaN Count: 2358
+Non-AKI NaN Count: 0
+Non-AKI Non-NaN Count: 1283
+----------------------------------------
+Metrics for df_smote:
+AKI NaN Count: 0
+AKI Non-NaN Count: 2358
+Non-AKI NaN Count: 0
+Non-AKI Non-NaN Count: 2358
+----------------------------------------
