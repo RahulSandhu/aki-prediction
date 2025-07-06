@@ -89,7 +89,7 @@ selection
 
 ## 📚 License
 
-This project is licensed under the terms of the [LICENSE](LICENSE) file.
+* This project is licensed under the terms of the [LICENSE](LICENSE) file.
 
 ## 🎓 Acknowledgements
 
