@@ -1,5 +1,4 @@
-# Editable Git install with no remote (aki-prediction==0.1.0)
--e /home/rahul/desktop/mhedas/1st_year/q1/electronic_health_records/assessments/a03_aki_prediction
+-e git+https://github.com/RahulSandhu/aki-prediction@4bb003903dff27e33b684ecf3019c30f387a91e4#egg=aki_prediction
 asttokens==3.0.0
 contourpy==1.3.2
 cycler==0.12.1
