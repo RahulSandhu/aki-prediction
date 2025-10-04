@@ -1,0 +1,67 @@
+SELECT 
+    ITEMID, LABEL
+FROM 
+    D_ITEMS
+WHERE 
+    LOWER(LABEL) LIKE '%anion gap%'
+    OR LOWER(LABEL) LIKE '%albumin%'
+    OR LOWER(LABEL) LIKE '%bilirubin%'
+    OR LOWER(LABEL) LIKE '%creatinine%'
+    OR LOWER(LABEL) LIKE '%chloride%'
+    OR LOWER(LABEL) LIKE '%glucose%'
+    OR LOWER(LABEL) LIKE '%hematocrit%'
+    OR LOWER(LABEL) LIKE '%hemoglobin%'
+    OR LOWER(LABEL) LIKE '%lactate%'
+    OR LOWER(LABEL) LIKE '%platelet%'
+    OR LOWER(LABEL) LIKE '%potassium%'
+    OR LOWER(LABEL) LIKE '%sodium%'
+    OR LOWER(LABEL) LIKE '%blood urea nitrogen%'
+    OR LOWER(LABEL) LIKE '%partial thromboplastin time%'
+    OR LOWER(LABEL) LIKE '%ptt%'
+    OR LOWER(LABEL) LIKE '%international normalized ratio%'
+    OR LOWER(LABEL) LIKE '%inr%'
+    OR LOWER(LABEL) LIKE '%estimated gfr%'
+    OR LOWER(LABEL) LIKE '%egfr%'
+    OR LOWER(LABEL) LIKE '%heart rate%'
+    OR LOWER(LABEL) LIKE '%systolic blood pressure%'
+    OR LOWER(LABEL) LIKE '%diastolic blood pressure%'
+    OR LOWER(LABEL) LIKE '%temperature%'
+    OR LOWER(LABEL) LIKE '%oxygen saturation%'
+    OR LOWER(LABEL) LIKE '%weight%'
+    OR LOWER(LABEL) LIKE '%height%'
+    OR LOWER(LABEL) LIKE '%mechanical ventilation%'
+    OR LOWER(LABEL) LIKE '%vasopressor%'
+UNION
+SELECT 
+    ITEMID, LABEL
+FROM 
+    D_LABITEMS
+WHERE 
+    LOWER(LABEL) LIKE '%anion gap%'
+    OR LOWER(LABEL) LIKE '%albumin%'
+    OR LOWER(LABEL) LIKE '%bilirubin%'
+    OR LOWER(LABEL) LIKE '%creatinine%'
+    OR LOWER(LABEL) LIKE '%chloride%'
+    OR LOWER(LABEL) LIKE '%glucose%'
+    OR LOWER(LABEL) LIKE '%hematocrit%'
+    OR LOWER(LABEL) LIKE '%hemoglobin%'
+    OR LOWER(LABEL) LIKE '%lactate%'
+    OR LOWER(LABEL) LIKE '%platelet%'
+    OR LOWER(LABEL) LIKE '%potassium%'
+    OR LOWER(LABEL) LIKE '%sodium%'
+    OR LOWER(LABEL) LIKE '%blood urea nitrogen%'
+    OR LOWER(LABEL) LIKE '%partial thromboplastin time%'
+    OR LOWER(LABEL) LIKE '%ptt%'
+    OR LOWER(LABEL) LIKE '%international normalized ratio%'
+    OR LOWER(LABEL) LIKE '%inr%'
+    OR LOWER(LABEL) LIKE '%estimated gfr%'
+    OR LOWER(LABEL) LIKE '%egfr%'
+    OR LOWER(LABEL) LIKE '%heart rate%'
+    OR LOWER(LABEL) LIKE '%systolic blood pressure%'
+    OR LOWER(LABEL) LIKE '%diastolic blood pressure%'
+    OR LOWER(LABEL) LIKE '%temperature%'
+    OR LOWER(LABEL) LIKE '%oxygen saturation%'
+    OR LOWER(LABEL) LIKE '%weight%'
+    OR LOWER(LABEL) LIKE '%height%'
+    OR LOWER(LABEL) LIKE '%mechanical ventilation%'
+    OR LOWER(LABEL) LIKE '%vasopressor%';
