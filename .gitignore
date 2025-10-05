@@ -1,5 +1,5 @@
 # Ignore files and folders
-images/logos/
+images/logos
 presentation/**
 report/**
 
