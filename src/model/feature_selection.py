@@ -144,6 +144,6 @@ if __name__ == "__main__":
     features_table = features_table[features_table["P-Value"] <= 0.05]
 
     # Save metrics to a file
-    os.makedirs("../../results/", exist_ok=True)
-    with open("../../results/features.txt", "w", encoding="utf-8") as f:
+    os.makedirs("../../results/tables/", exist_ok=True)
+    with open("../../results/tables/features.txt", "w", encoding="utf-8") as f:
         f.write(features_table.to_string(index=False))

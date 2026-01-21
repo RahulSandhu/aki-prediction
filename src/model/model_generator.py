@@ -4,6 +4,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from model.feature_selection import summary_table, vif_collinearity
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
     accuracy_score,
@@ -15,8 +16,6 @@ from sklearn.metrics import (
     roc_curve,
 )
 from sklearn.model_selection import train_test_split
-
-from model.feature_selection import summary_table, vif_collinearity
 
 
 def compute_auc_ci(y_true, y_proba, n_bootstraps=1000, random_state=123) -> tuple:
@@ -174,9 +173,9 @@ def logistic_model_evaluation(
     plt.ylabel("True Positive Rate")
 
     # Save plot
-    os.makedirs("../../images/", exist_ok=True)
+    os.makedirs("../../results/figures/", exist_ok=True)
     plt.savefig(
-        "../../images/roc_curve.png",
+        "../../results/figures/roc_curve.png",
         bbox_inches="tight",
         dpi=300,
         transparent=True,
@@ -205,9 +204,9 @@ def logistic_model_evaluation(
     plt.ylabel("Features")
 
     # Save plot
-    os.makedirs("../../images/", exist_ok=True)
+    os.makedirs("../../results/figures/", exist_ok=True)
     plt.savefig(
-        "../../images/coeffs.png",
+        "../../results/figures/coeffs.png",
         bbox_inches="tight",
         dpi=300,
         transparent=True,
@@ -224,7 +223,7 @@ if __name__ == "__main__":
     matplotlib.use("QtAgg")
 
     # Use custom style
-    plt.style.use("../../config/matplotlib/mhedas.mplstyle")
+    plt.style.use("../../config/matplotlib/stylelib/mhedas.mplstyle")
 
     # Load dataset
     df_smote = pd.read_csv("../../data/processed/cohort_smote.csv")
@@ -252,8 +251,8 @@ if __name__ == "__main__":
     metrics = logistic_model_evaluation(X, y)
 
     # Save metrics to a file
-    os.makedirs("../../results/", exist_ok=True)
-    with open("../../results/metrics.txt", "w", encoding="utf-8") as f:
+    os.makedirs("../../results/tables/", exist_ok=True)
+    with open("../../results/tables/metrics.txt", "w", encoding="utf-8") as f:
         for set_name, metric in metrics.items():
             f.write(f"Metrics for {set_name.capitalize()} Set:\n")
             f.write(f"Confusion Matrix:\n{metric['conf_matrix']}\n")
@@ -300,9 +299,12 @@ if __name__ == "__main__":
     plt.ylim(0.6, 1.0)
 
     # Save plot
-    os.makedirs("../../images/", exist_ok=True)
+    os.makedirs("../../results/figures", exist_ok=True)
     plt.savefig(
-        "../../images/errorbars.png", bbox_inches="tight", dpi=300, transparent=True
+        "../../images/errorbars.png",
+        bbox_inches="tight",
+        dpi=300,
+        transparent=True,
     )
 
     # Close plot

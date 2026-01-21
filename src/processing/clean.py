@@ -144,8 +144,8 @@ if __name__ == "__main__":
     }
 
     # Save NaN counts to a file
-    os.makedirs("../../results/", exist_ok=True)
-    with open("../../results/nan_counts.txt", "w", encoding="utf-8") as f:
+    os.makedirs("../../results/tables/", exist_ok=True)
+    with open("../../results/tables/nan_counts.txt", "w", encoding="utf-8") as f:
         # Loop through each dataset
         for dataset_name, dataset in datasets.items():
             # Define masks for AKI and Non-AKI

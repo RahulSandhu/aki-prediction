@@ -20,44 +20,49 @@ as LaTeX reports and presentation slides.
 
    ```bash
    python3 -m venv .venv
-   source venv/bin/activate
+   source .venv/bin/activate
    ```
 
 3. **Install dependencies**
-
    ```bash
    pip install -r requirements.txt
    ```
 
-## 💻 Source
+## 📁 Dataset
 
-* `src/main.py`: Script to run preprocessing, feature selection, and modeling
-* `src/model/`: Logistic regression model logic
-* `src/processing/`: Data preprocessing, eGFR calculation, and feature
-selection
-* `src/query/`: Cohort building tools
+The project analyzes data from the MIMIC-III (Medical Information Mart for
+Intensive Care III) clinical database, focusing on septic ICU patients at risk
+for Acute Kidney Injury. The dataset includes comprehensive clinical and
+laboratory measurements with key features:
 
-## 📁 Data
+- **Renal function markers**: eGFR (estimated Glomerular Filtration Rate),
+  creatinine, blood urea nitrogen (BUN)
+- **Electrolyte measures**: Potassium, sodium, anion gap, bicarbonate
+- **Vital signs**: Blood pressure, heart rate, temperature
+- **Laboratory values**: White blood cell count, hemoglobin, platelets
+- **Clinical indicators**: Sepsis severity scores, comorbidity indices
+- **Outcome measure**: Development of Acute Kidney Injury (AKI)
 
-* `data/raw/`: Raw MIMIC-III data extracted and restricted to the cohort
-* `data/processed/`: Preprocessed dataset used for modeling
+The analysis uses **logistic regression** with feature selection to predict AKI
+occurrence in the septic ICU patient population.
 
 ## 📊 Results
 
-* `results/`: Metrics, selected features, missing value summaries
-* Final model performance:
-  * **AUC (Test Set)**: 0.810 (95% CI: 0.788–0.832)
-  * **Accuracy**: 74.1%
-  * **Precision**: 77.0%
-  * **Recall**: 67.3%
-  * **F1-score**: 71.8%
-* Top predictors:
-  * eGFR, Creatinine, BUN, Anion Gap, Potassium
+- Final model performance achieved **AUC of 0.810** (95% CI: 0.788–0.832) on
+  the test set
+- Model demonstrates robust classification with accuracy of **74.1%**,
+  precision of **77.0%**, recall of **67.3%**, and F1-score of **71.8%**
+- Top predictive features identified: eGFR, creatinine, BUN, anion gap, and
+  potassium
+- Feature selection and preprocessing pipeline optimized for clinical
+  interpretability and prediction accuracy
 
 ## 🎓 Acknowledgements
 
-* Dataset: MIMIC-III clinical database
-* Developed as part of the Health Data Science Master’s program at Universitat
-Rovira i Virgili (URV)
+- [PhysioNet MIMIC-III Clinical
+  Database](https://physionet.org/content/mimiciii/1.4/) – Medical Information
+  Mart for Intensive Care III
+- Developed as part of the Electronic Health Records course of the Master in
+  Health Data Science at Universitat Rovira i Virgili (URV)
 
 </div>
