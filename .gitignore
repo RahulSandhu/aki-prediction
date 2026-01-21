@@ -1,4 +1,5 @@
 # Ignore files and folders
+data/
 config/
 presentation/**
 report/**
