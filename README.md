@@ -62,7 +62,7 @@ occurrence in the septic ICU patient population.
 - [PhysioNet MIMIC-III Clinical
   Database](https://physionet.org/content/mimiciii/1.4/) – Medical Information
   Mart for Intensive Care III
-- Developed as part of the Electronic Health Records course of the Master in
-  Health Data Science at Universitat Rovira i Virgili (URV)
+- Developed as part of the Electronic Health Records course in the Master in
+  Health Data Science program at Universitat Rovira i Virgili (URV)
 
 </div>
